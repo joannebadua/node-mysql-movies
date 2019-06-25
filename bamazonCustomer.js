@@ -28,21 +28,27 @@ function viewAllProducts() {
 var q = "SELECT * FROM goods";
 connection.query(q, function (err, res) {
     if (err) throw err;
-    console.log(res);
-});
+    // console.log(res);
+//reiterate through the response and format
+for (var i = 0; i < res.length; i++) {
+//alt: separate function that takes in an array and formats
+console.log(res[i].Product_name + " | " + res[i].Price + " | " + res[i].Stock_quantity + " | " + res[i].Department_name + " | ")
+}  
+              console.log("----------------------------------");
+          });
 }
 
 
-//       //hand off a query string - string literal argument - 
-//       connection.query("SELECT * FROM products", 
-//       //callback function to be excuted once query has been executed
-//       function(err, res) {
-//           if (err) throw err;
-//           //reiterate through the response and format
-//           for (var i = 0; i < res.length; i++) {
-//               //alt: separate function that takes in an array and formats
-//               console.log(res[i].item_id + " | " + res[i].product_name + " | " + res[i].price + " | " + res.[i].stock_quantity + " | " + res[i].department_name + " | ")
-//           }  
+//hand off a query string - string literal argument - 
+//connection.query("SELECT * FROM products", 
+//callback function to be excuted once query has been executed
+//function(err, res) {
+//if (err) throw err;
+//reiterate through the response and format
+//for (var i = 0; i < res.length; i++) {
+//alt: separate function that takes in an array and formats
+//console.log(res[i].item_id + " | " + res[i].product_name + " | " + res[i].price + " | " + res.[i].stock_quantity + " | " + res[i].department_name + " | ")
+// }  
 //               console.log("----------------------------------");
 //           });
         
