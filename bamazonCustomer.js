@@ -28,16 +28,16 @@ connection.connect(function (err) {
 function viewAllProducts() {
   var q = "SELECT * FROM goods";
   console.log("----------------------------------------------------------------------------------------------------------");
-  console.log("This is a tribute to the performers on the beautiful stages from Broadway to the screen. ");
-  console.log("This is a tribute to the performers on the beautiful stages from Broadway to the screen. ");
-  console.log("This is a tribute to the performers on the beautiful stages from Broadway to the screen. ");
-  console.log("This is a tribute to the performers on the beautiful stages from Broadway to the screen. ");
+  console.log("Welcome. We have prized collector items from Broadway and the backstage of movies that have brought joy");
+  console.log("and memories. The breaking, the healing, of music that have brought you to tears. Step back and gaze at");
+  console.log("rare artifacts of poetry that you need to display in your living room or keep hidden to treasure. These");
+  console.log("goods have traveled and survived many stories to get to you. Shipping is free, and satisfaction is guaranteed!");
   console.log("----------------------------------------------------------------------------------------------------------");
   var table = new Table({
     head: ["id", "Product_name", "Price", "Stock_quantity", "Department_name"],
     colWidths: [5, 70, 10, 20],
     style: {
-      head: ["gold"]
+      head: ["green"]
     }
   });
 
