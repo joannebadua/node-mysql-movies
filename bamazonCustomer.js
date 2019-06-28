@@ -64,18 +64,13 @@ function customerSelect() {
         type: "input",
         message: "Please select the ID of the prized item you would like to buy."
       },
-        // {
-        //   name: "quantity",
-        //   type: "input",
-        //   message: "How many you would like to buy."
-        // }
       ]
     )
     //dont forget to close the [] arrays bc the prompt knows there are two questions. 
     .then(function (inquirerResponse) {
       // console.log(inquirerResponse);
-      //below is the pass inquirer response.pronct id is the answer, 
-      //and give it to the new function in 81 and show up as a placeholder. this will become idSelected
+      //below is the pass inquirer response.pronct id (the answer) 
+      //we give the answer to the new function in 71 and show up as a placeholder. this will become idSelected
       quantitySelect(inquirerResponse.productId);
     });
 }
@@ -84,7 +79,7 @@ function quantitySelect(idSelected) {
   //database call to ask how many to buy
   connection.query(
         "SELECT * FROM goods WHERE id = " + idSelected, function(err, res){
-          // console.log(res[0].Product_name, err);
+          console.log(res[0].Product_name, err);
           howManyPrompt(res[0]);
           //res is the goods. the index 0 to pick this whole object from the array then .product_name
       });
@@ -96,14 +91,15 @@ inquirer.prompt (
     {
       name: "quantity",
       type: "input",
-      message: productToBuy.Product_name + "... How many you would like to buy."
+      message: productToBuy.Product_name + " exquisite taste! How many you would like to buy."
     }
   ]
 )
 .then(function (inquirerResponse) {
   // console.log(inquirerResponse); 
-  if (inquirerResponse.quantitySelect > productToBuy.Stock_quantity) {
-console.log("Not enough in stock")
+  // console.log(productToBuy.Stock_quantity);
+  if (inquirerResponse.quantity > productToBuy.Stock_quantity) {
+console.log("Unfortunately, you will have to come another day in hopes ")
   }
   else {
     console.log("You got it! Enjoy!")
@@ -119,3 +115,5 @@ console.log("Not enough in stock")
   }
 });
 }
+
+

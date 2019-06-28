@@ -14,31 +14,31 @@ CREATE TABLE goods (
 );
 
 INSERT INTO goods (product_name, price, stock_quantity, department_name)
-VALUES ("Ray Charles poster", 25.00, 100, "music");
+VALUES ("Autographed Ray Charles poster", 50, 10, "music");
 
 INSERT INTO goods (product_name, price, stock_quantity, department_name)
-VALUES ("Alexander Hamilton Reynolds Pamphlet", 3.10, 120, "broadway");
+VALUES ("Magical Carpet from Alladin", 1000, 1, "broadway");
 
 INSERT INTO goods (product_name, price, stock_quantity, department_name)
-VALUES ("Roger's Guitar from Rent", 325.00, 75, "broadway");
+VALUES ("Roger's Guitar from Rent", 325.00, 5, "broadway");
 
 INSERT INTO goods (product_name, price, stock_quantity, department_name)
-VALUES ("Vita and Virginia love letters", 75.50, 20, "movies");
+VALUES ("Vita and Virginia love letters", 20, 9, "movies");
 
 INSERT INTO goods (product_name, price, stock_quantity, department_name)
-VALUES ("Dance shoes from Coming Up Queer", 100.00, 12, "movies");
+VALUES ("Dance shoes from Coming Up Queer", 70, 6, "movies");
 
 INSERT INTO goods (product_name, price, stock_quantity, department_name)
-VALUES ("Wicked broom", 500.00, 5, "broadway");
+VALUES ("Wicked broom", 500.00, 3, "broadway");
 
 INSERT INTO goods (product_name, price, stock_quantity, department_name)
-VALUES ("Red Coat from the Greatest Showman", 2500.00, 2, "movies");
+VALUES ("Red Coat from the Greatest Showman", 2500.00, 1, "movies");
 
 INSERT INTO goods (product_name, price, stock_quantity, department_name)
-VALUES ("King George's Crown from Alexander Hamilton", 3000.00, 1, "broadway");
+VALUES ("King George's Crown from Alexander Hamilton", 3000.00, 2, "broadway");
 
 INSERT INTO goods (product_name, price, stock_quantity, department_name)
 VALUES ("Elton John's piano", 75000, 2, "music");
 
 INSERT INTO goods (product_name, price, stock_quantity, department_name)
-VALUES ("Cans from Beastie Boy's Make Some Noise", 20.25, 75, "music");
+VALUES ("Cans from Beastie Boy's Make Some Noise", 20.25, 20, "music");
