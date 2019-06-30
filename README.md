@@ -12,6 +12,12 @@ The customer will place the order with the unique ID which them prompts the appl
 
 The SQL database will be updated to reflect the remaining quantity. The customer will see the total cost of their purchase.
 
-### Technology 
+### Technology Used
+* [NODE.js](https://nodejs.org/en/about/) 
+* [My SQL](https://www.mysql.com/about/)
+* [Javascript (JS)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+
 
 ### Author
+* Joey Badua* - [Node-Mysql-Movies](https://github.com/joannebadua)
