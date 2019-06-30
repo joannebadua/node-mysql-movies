@@ -1,5 +1,5 @@
 # node-mysql-movies
-This is a MySQL Database called Bamazon, the movies-music-broadway edition.
+This is a MySQL Database called Bamazon, the movies-music-broadway edition. View demo here https://youtu.be/JAH1qjKjVMo
 
 ## Instructions
 A customer will see a table database of ten products with corresponding columns of a unique id for each product, the name of the product, the department name, price (in dollars), and stock quantity.
