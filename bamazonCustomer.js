@@ -79,11 +79,12 @@ function quantitySelect(idSelected) {
   //database call to ask how many to buy
   connection.query(
         "SELECT * FROM goods WHERE id = " + idSelected, function(err, res){
-          console.log(res[0].Product_name, err);
+          // console.log(res[0].Product_name, err);
           howManyPrompt(res[0]);
           //res is the goods. the index 0 to pick this whole object from the array then .product_name
       });
 }
+
 function howManyPrompt(productToBuy) {
 // console.log("productToBuy", productToBuy);
 inquirer.prompt (
@@ -91,7 +92,7 @@ inquirer.prompt (
     {
       name: "quantity",
       type: "input",
-      message: productToBuy.Product_name + " exquisite taste! How many you would like to buy."
+      message: productToBuy.Product_name + ", exquisite taste! How many you of these lovely treasures would you like to take home?"
     }
   ]
 )
@@ -99,17 +100,19 @@ inquirer.prompt (
   // console.log(inquirerResponse); 
   // console.log(productToBuy.Stock_quantity);
   if (inquirerResponse.quantity > productToBuy.Stock_quantity) {
-console.log("Unfortunately, you will have to come another day in hopes ")
+console.log("Unfortunately, we cannot fulfill your order at the moment. You may have to rethink. Take your time, look around.");
   }
   else {
-    console.log("You got it! Enjoy!")
     //from ln 97 quanityt
+    var moneys = inquirerResponse.quantity * productToBuy.Price;
     var newTotal = parseInt(productToBuy.Stock_quantity) - parseInt(inquirerResponse.quantity);
     // console.log("newTotal", newTotal)
     // console.log("productToBuy", productToBuy)
     // console.log("inquirerResponse", inquirerResponse)
     var query = "UPDATE goods SET Stock_quantity = " + newTotal + " WHERE id = " + productToBuy.id;
     connection.query(query, function(err, res){
+      console.log("That would be $ " + moneys + " Enjoy! If you tag us on Instagram, you get 10% off the music items at your next visit!")
+    
 // console.log(err, res)
     });
   }
